@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,13 +38,16 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Number guessing game</h1>
 
-    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your
+        guess was too high or too low.</p>
 
     <div class="form">
-        <label for="guessField">Enter a guess:</label><input type="text" id="guessField" class="guessField">
+        <label for="guessField">Enter a guess:</label>
+        <input type="text" id="guessField" class="guessField">
         <input type="submit" value="Submit guess" class="guessSubmit">
     </div>
 
@@ -73,7 +77,7 @@
             }
             guesses.textContent += userGuess + ' ';
 
-            if(userGuess === randomNumber) {
+            if (userGuess === randomNumber) {
                 lastResult.textContent = 'Congratulations! You got it right!';
                 lastResult.style.backgroundColor = 'green';
                 lowOrHi.textContent = '';
@@ -84,7 +88,7 @@
             } else {
                 lastResult.textContent = 'Wrong!';
                 lastResult.style.backgroundColor = 'red';
-                if(userGuess < randomNumber) {
+                if (userGuess < randomNumber) {
                     lowOrHi.textContent = 'Last guess was too low!';
                 } else if (userGuess > randomNumber) {
                     lowOrHi.textContent = 'Last guess was too high!';
@@ -110,7 +114,7 @@
         function resetGame() {
             guessCount = 1;
             var resetParas = document.querySelectorAll('.resultParas p');
-            for(var i=0; i< resetParas.length;i++) {
+            for (var i = 0; i < resetParas.length; i++) {
                 resetParas[i].textContent = '';
             }
 
@@ -127,4 +131,5 @@
         }
     </script>
 </body>
+
 </html>
